@@ -8,7 +8,9 @@ require github.com/gofiber/fiber/v2 v2.30.0
 
 require (
 	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/gofiber/utils v0.0.10 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
+	github.com/gorilla/schema v1.1.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.0.2 // indirect
@@ -24,6 +26,7 @@ require (
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/go-siris/siris v7.4.0+incompatible // indirect
+	github.com/gofiber/fiber v1.14.6
 	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.15.0 // indirect
 	github.com/labstack/echo v3.3.10+incompatible // indirect

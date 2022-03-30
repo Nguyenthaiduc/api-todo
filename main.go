@@ -1,6 +1,7 @@
 package main
 
 import (
+	"api-todo/routes"
 	"log"
 	"net/http"
 
@@ -26,6 +27,8 @@ func setupRoutes(app *fiber.App){
 			"message" : "Bạn đang ở cuối trang",
 		})
 	})
+	//routes group
+	routes.TodoRoute(api.Group("/todos"))
 
 }
 
