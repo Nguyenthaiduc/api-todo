@@ -1,18 +1,31 @@
 package database
 
 import (
-	"fmt"
+	"context"
 	"log"
 	"os"
-	"strconv"
+	"time"
+
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func getURL() string {
-	port, err := strconv.Atoi(os.Getenv("PORT"))
-	if err != nil {
-		log.Fatal("error can't load PORT fromm env")
-		port = 27010
+//mongodbInstance
+type MongoInstance struct {
+	Client *mongo.Client
+	Db     *mongo.Database
+}
 
+var MongoIns MongoInstance
+
+//connect Database
+func ConnectDB() {
+	client, err := mongo.NewClient(options.Client().ApplyURI(os.Getenv("MONGO_URL")))
+	if err != nil {
+		log.Fatal(err)
 	}
-	return fmt.Sprintf("")
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel() // cancel timeout
+	
 }
